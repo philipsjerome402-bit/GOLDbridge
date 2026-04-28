@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Work-Fast Access</title>
+<title>GOLDbridge Access</title>
 <style>
   /* Mba hahafeno ny efijery tanteraka sy hanafoanana ny fotsy */
   html, body { 
@@ -90,12 +90,46 @@
   .instruction-text { font-size: 14px; color: #bbb; margin-bottom: 20px; line-height: 1.5; text-align: left; }
 
   .error-msg { color: #ff5252; font-size: 12px; margin-top: 8px; display: none; }
+
+  /* New style for AI Disclaimer */
+  .ai-disclaimer {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #aaa;
+  }
+
+  .ai-disclaimer b {
+    color: #eee;
+  }
+
+  .ai-disclaimer ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+  }
+
+  .ai-disclaimer li {
+    margin-bottom: 8px;
+  }
+
+  /* Icons */
+  .network-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
 </style>
 </head>
 <body>
 
   <div id="loginSection" class="auth-card">
-    <div class="logo">WORK-FAST</div>
+    <div class="logo">GOLDbridge</div>
     <h3>Connexion</h3>
     <input type="email" id="loginEmail" placeholder="Email">
     <input type="password" id="loginPass" placeholder="Mot de passe">
@@ -105,7 +139,7 @@
   </div>
 
   <div id="registerSection" class="auth-card" style="display:none;">
-    <div class="logo">WORK-FAST</div>
+    <div class="logo">GOLDbridge</div>
     <h3>Inscription</h3>
     <input type="text" id="regName" placeholder="Nom complet">
     <input type="email" id="regEmail" placeholder="Email">
@@ -125,19 +159,35 @@
     </div>
     
     <div class="address-box">
-      <span class="network-name">BSC / POLYGON (EVM)</span>
+      <span class="network-name">
+        <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png?v=032" alt="BSC" class="network-icon">
+        BSC / POLYGON (EVM)
+      </span>
       <code id="evmAddr">0x154b614745c3b21777f9f5687528d237db67b792</code>
       <span class="copy-link" onclick="copy('evmAddr')">Copier l'adresse EVM</span>
     </div>
 
     <div class="address-box">
-      <span class="network-name">TON NETWORK</span>
+      <span class="network-name">
+        <img src="https://cryptologos.cc/logos/toncoin-ton-logo.png?v=032" alt="TON" class="network-icon">
+        TON NETWORK
+      </span>
       <code id="tonAddr">UQAGNZ508RSxGHEeXpkbZ9Qq6xnO9x7CeTw9-HA5dv9-7aNJ</code>
       <span class="copy-link" onclick="copy('tonAddr')">Copier l'adresse TON</span>
     </div>
 
     <input type="text" id="txHash" placeholder="Coller le Hash ici">
     <button style="background: #4fc3f7; color: #000;" onclick="verifyPayment()">Vérifier le paiement</button>
+    
+    <div class="ai-disclaimer">
+      GOLDbridge est une plateforme de formation et d'exploitation d'Intelligence Artificielle (IA). La participation de 5$ USDT est une condition requise pour :
+      <ul>
+        <li><b>Garantir la qualité du traitement :</b> L'IA nécessite des données propres et précises provenant de collaborateurs engagés et rigoureux.</li>
+        <li><b>Sélection des collaborateurs :</b> Ce frais fait office de filtre pour écarter les profils non sérieux, garantissant que seuls les membres motivés contribuent au traitement de données de haute précision.</li>
+        <li><b>Autorisation d'accès (Access Grant) :</b> Cette participation octroie une licence d'accès aux outils et algorithmes propriétaires utilisés pour l'entraînement (training) et le traitement des flux de données.</li>
+      </ul>
+    </div>
+
     <span class="link" onclick="showPage('loginSection')">← Retour</span>
   </div>
 
@@ -189,5 +239,4 @@
   }
 </script>
 </body>
-  </html>
-      
+</html>
