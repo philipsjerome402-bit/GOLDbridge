@@ -1,4 +1,4 @@
-name: Build GOLDbridge APK
+name: Build APK
 on: [push]
 jobs:
   build:
@@ -7,11 +7,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Build APK
-        uses: simple-apps/github-action-web-to-apk@v1.0.0
+      - name: Build Android APK
+        uses: Gearix/web-to-apk@v1
         with:
-          app_name: "GOLDbridge"
-          # Ity no rohy ho lasa App
+          app-name: "GOLDbridge"
           url: "https://philipsjerome402-bit.github.io/GOLDbridge/"
           icon: "logo.png"
           
