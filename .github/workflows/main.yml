@@ -1,4 +1,4 @@
-name: Build GOLDbridge APK
+name: Build APK
 on: [push]
 jobs:
   build:
@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Build Android APK
         uses: swayangjit/web-to-apk@v1
         with:
