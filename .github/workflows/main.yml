@@ -1,16 +1,17 @@
-name: Build APK
+name: Build GOLDbridge APK
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Build Android APK
-        uses: swayangjit/web-to-apk@v1
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Build APK
+        uses: simple-apps/github-action-web-to-apk@v1.0.0
         with:
-          app-name: "GOLDbridge"
+          app_name: "GOLDbridge"
+          # Ity no rohy ho lasa App
+          url: "https://philipsjerome402-bit.github.io/GOLDbridge/"
           icon: "logo.png"
-          package-name: "com.goldbridge.workfast"
-          output-name: "goldbridge-final.apk"
           
